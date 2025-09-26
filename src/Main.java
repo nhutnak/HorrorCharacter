@@ -1,5 +1,7 @@
 import java.util.ArrayList;
-
+/**
+ * Main class to demonstrate the functionality of HorrorCharacter and its subclasses.
+ */
 public class Main
 {
     public static void main(String[] args)
