@@ -9,11 +9,11 @@ public class Zombie extends HorrorCharacter
      * Constructor for Zombie class
      * @param name
      * @param health
-     * @param vulnerabilities
+
      */
-    public Zombie(String name, int health, Vulnerability[] vulnerabilities)
+    public Zombie(String name, int health)
     {
-        super(name, health, vulnerabilities = new Vulnerability[]{Vulnerability.SUNLIGHT, Vulnerability.FIRE});
+        super(name, health, new Vulnerability[]{Vulnerability.SUNLIGHT, Vulnerability.FIRE});
     }
     /**
      * The zombie bites you.
