@@ -6,18 +6,19 @@
 
 public class Vampire extends HorrorCharacter implements Transformable
 {
+    /** Indicates whether the vampire is in bat form (true) or human form (false)
+     */
     private Boolean transformed;
 
     /**
      * Constructor for Vampire class
      * @param name
      * @param health
-     * @param vulnerabilities
      * @param transformed
      */
-    public Vampire(String name, int health, Vulnerability[] vulnerabilities, Boolean transformed)
+    public Vampire(String name, int health, Boolean transformed)
     {
-        super(name, health, vulnerabilities = new Vulnerability[]{Vulnerability.SUNLIGHT, Vulnerability.SILVER});
+        super(name, health, new Vulnerability[]{Vulnerability.SUNLIGHT, Vulnerability.SILVER});
         this.transformed = transformed;
     }
     /**
@@ -29,11 +30,11 @@ public class Vampire extends HorrorCharacter implements Transformable
     {
         if(!transformed)
         {
-            System.out.println("The vampire (in human form) bites you.");
+            System.out.println("The vampire " + super.getName() + "(in human form) bites you.");
         }
         else
         {
-            System.out.println("The vampire (in bat form) swoops down and scratches you.");
+            System.out.println("The vampire " + super.getName() + " (in bat form) swoops down and scratches you.");
         }
     }
     /**
@@ -45,10 +46,10 @@ public class Vampire extends HorrorCharacter implements Transformable
     {
         if (transformed)
         {
-            System.out.println("The vampire (in bat form) flies away.");
+            System.out.println("The vampire " + super.getName()+" (in bat form) flies away.");
         } else
         {
-            System.out.println("The vampire (in human form) dissapeared.");
+            System.out.println("The vampire " + super.getName()+ "(in human form) dissapeared.");
         }
     }
 
@@ -59,8 +60,14 @@ public class Vampire extends HorrorCharacter implements Transformable
     public void transform()
     {
         transformed = !transformed;
+        System.out.println("The vampire " + super.getName());
+        if (transformed) {System.out.println(" has transformed into bat form.");}
+        else {System.out.println(" has transformed into human form.");}
     }
-
+    /**
+     * Returns a string representation of the vampire, including the value of transformed.
+     * @return String
+     */
     @Override
     public String toString()
     {

@@ -29,4 +29,6 @@ You are tasked with designing a character system representing classic horror mov
 5. Create Javadoc for all your classes. Describe all classes methods, parameters, and return types. Make sure to generate the Javadoc before submitting the project
 
 6. Create a Test Class HorrorCharacterApp:
-  - Demonstrate the functionality of each class, using inheritance and interface based polymorphism (for example, housing classes in containers typed to their parent class or interface, and iterating through demonstrating the proper method definitions are running).
+  - Demonstrate the functionality of each class, using inheritance and interface based polymorphism
+  (for example, housing classes in containers typed to their parent class or interface,
+  and iterating through demonstrating the proper method definitions are running).

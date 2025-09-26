@@ -31,6 +31,13 @@ public class Zombie extends HorrorCharacter
     {
         System.out.println("The zombie runs away.");
     }
-
-
+    /**
+     * Returns a string representation of the zombie.
+     * @return String
+     */
+    @Override
+    public String toString()
+    {
+        return super.toString();
+    }
 }

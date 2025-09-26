@@ -6,6 +6,9 @@
 
 public class Werewolf extends HorrorCharacter implements Transformable
 {
+    /**
+    * Indicates whether the werewolf is in wolf form (true) or human form (false)
+     */
     private Boolean transformed;
     /**
      * Constructor for Werewolf class
@@ -28,11 +31,11 @@ public class Werewolf extends HorrorCharacter implements Transformable
     {
         if(!transformed)
         {
-            System.out.println("The Werewolf (in human form) slaps you");
+            System.out.println("The Werewolf " + super.getName() + " (in human form) slaps you");
         }
         else
         {
-            System.out.println("The Werewolf (in wolf form) slashes you");
+            System.out.println("The Werewolf " + super.getName()+" (in wolf form) slashes you");
         }
     }
     /**
@@ -44,11 +47,11 @@ public class Werewolf extends HorrorCharacter implements Transformable
     {
         if(!transformed)
         {
-            System.out.println("The Werewolf (in human form) turns around and runs away");
+            System.out.println("The Werewolf " + super.getName()+ " (in human form) turns around and runs away");
         }
         else
         {
-            System.out.println("The Werewolf (in wolf form) runs away on all fours");
+            System.out.println("The Werewolf " + super.getName()+ " (in wolf form) runs away on all fours");
         }
     }
 
@@ -59,8 +62,19 @@ public class Werewolf extends HorrorCharacter implements Transformable
     public void transform()
     {
         transformed = !transformed;
+        if(transformed)
+        {
+            System.out.println("The Werewolf " + super.getName() + " has transformed into wolf form.");
+        }
+        else
+        {
+            System.out.println("The Werewolf " + super.getName() + " has transformed into human form.");
+        }
     }
-
+    /**
+     * Returns a string representation of the werewolf, including its transformation state.
+     * @return String
+     */
     @Override
     public String toString()
     {

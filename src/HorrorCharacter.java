@@ -7,9 +7,14 @@ import java.util.Arrays;
  */
 public abstract class HorrorCharacter
 {
-
+    /** Name of the character
+     */
     private String name;
+    /** Health points of the character
+     */
     private int health;
+    /** Array of vulnerabilities for the character
+     */
     Vulnerability[] vulnerabilities;
     /**
      * Constructor for HorrorCharacter class
@@ -32,10 +37,56 @@ public abstract class HorrorCharacter
      */
     void flee(){}
     /**
+     * Returns the name of the character.
+     * @return String
+     */
+    public String getName()
+    {
+        return name;
+    }
+    /**
+     * Sets the name of the character.
+     * @param name
+     */
+    public void setName(String name)
+    {
+        this.name = name;
+    }
+    /**
+     * Returns the health points of the character.
+     * @return int
+     */
+    public int getHealth()
+    {
+        return health;
+    }
+    /**
+     * Sets the health points of the character.
+     * @param health
+     */
+    public void setHealth(int health)
+    {
+        this.health = health;
+    }
+    /**
+     * Sets the array of vulnerabilities for the character.
+     * @param vulnerabilities
+     */
+    public void setVulnerabilities(Vulnerability[] vulnerabilities)
+    {
+        this.vulnerabilities = vulnerabilities;
+    }
+
+    /**
      * Returns the array of vulnerabilities for the character.
      * @return Vulnerability[]
      */
+
     Vulnerability[] getVulnerabilities() {return vulnerabilities;}
+    /**
+     * Returns a string representation of the character, including name, health, and vulnerabilities.
+     * @return String
+     */
     @Override
     public String toString()
     {
