@@ -60,9 +60,8 @@ public class Vampire extends HorrorCharacter implements Transformable
     public void transform()
     {
         transformed = !transformed;
-        System.out.println("The vampire " + super.getName());
-        if (transformed) {System.out.println(" has transformed into bat form.");}
-        else {System.out.println(" has transformed into human form.");}
+        if (transformed) {System.out.println("The vampire " + super.getName() +" has transformed into bat form.");}
+        else {System.out.println("The vampire " + super.getName() + " has transformed into human form.");}
     }
     /**
      * Returns a string representation of the vampire, including the value of transformed.
